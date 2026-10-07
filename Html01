@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS와 html01</title>
+    <style>
+/* *태그 */
+
+/* 먼저 *태그는 : 전체 선택자입니다. 모든 태그에 색상을 줍니다. */
+        *{ color : blue; }
+/* 하지만 이렇게 지정 태그를 정해주면 지정 태그가 우선순위가 됩니다. */
+        h1{ color : red; }
+
+
+/* #태그 */
+/* #태그입니다. 아이디를 지정해서 사용합니다. 현재 코드에선 header와 header2를 사용했습니다.*/
+        #header{
+/* 너비를 800px 여백은 상/하 0 좌/우 오토를 주었습니다. */
+            width : 800px; margin : 0 auto;
+            background : red;
+        }
+        #header1{
+/* 3개의 margin값일 시 상 좌/우 하 순으로 크기를 정렬합니다.  */
+            width : 800px; margin : 10px 80px 20px;
+            background-color: purple;
+            color : white;
+        }
+
+/* .태그 */
+/* .태그 : 클래스를 지정해줍니다. 현재는 select라는 클래스를 준 상태이고 body에서 class = "select" 로 지정해서 사용합니다. 현재도 2개를 사용함. */
+        .select{
+/* 태그 안에서 너비의 크기는 800px로 설정 후 1개의 margin을 이용 했습니다. 이는 상 좌우 하 를 전체적으로 이동합니다.. */
+            width : 800px; margin : 10px;
+            background: blue;
+            color : yellow;
+        }
+        .select1{
+/* margin조건은 4개로 설정했습니다. 이는 상 우 하 좌 순으로 움직입니다. */
+            margin : 10px 40px 30px 30px;
+            background-color: black;
+            color : white;
+        }
+
+/* 속성선택자 */
+/* 속성선택자는 input함수를 써서 나타냅니다. */
+        input[type = text] { background: red; }
+        input[type = password] { background: blue; }
+
+</style>
+    <body>
+<!-- 글씨 설명 그대로 입니다. -->
+        <h1>*태그로 인해 블루로 변경 하였지만 h1의 지정태그로 인해 레드로 변경합니다.</h1>
+        <p>지정태그가 없습니다. *로 인해 블루로 변경하겠습니다.</p>
+        <div id = "header">아이디 태그 입니다.</div>
+        <div id = "header1">아이디 한 번 더 가능한지 보는 태그입니다.</div>
+        <div class = "select">클래스 태그 적용입니다.</div>
+        <div class = "select1">클래스 태그를 한 번 더 보는 태그입니다.</div>
+        
+<!-- form을 사용하는 이유는 데이터를 서버로 전송하기 위해 사용합니다. form의 역할입니다. -->
+        <form>
+            <input type = "text">
+            <input type = "password">
+        </form>
+    </body>
+</head>
+</html>
